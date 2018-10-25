@@ -3,10 +3,12 @@ require 'pry'
 class Artist
   attr_accessor :name
   attr_reader :songs
-  include Paramable
-  include Memorable::InstanceMethods
-  extend  Memorable::ClassMethods
-  extend  Findable
+  # include Paramable
+  # include Memorable::InstanceMethods
+  # extend  Memorable::ClassMethods
+  # extend  Findable
+  include Music::InstanceMethods
+  extend  Music::ClassMethods
 
   @@artists = []
 
